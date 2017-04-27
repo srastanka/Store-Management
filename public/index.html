@@ -1,0 +1,66 @@
+<!--
+Name:
+	index.html
+
+Description:
+	MyStore application landing page
+
+Author:
+	Saz
+-->
+
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Store Management</title>
+
+		<base href="/">
+		<!--  Stylesheets  -->
+		<link rel = "stylesheet" href = "css/bootstrap.min.css">
+		<link rel = "stylesheet" href = "css/main.css">
+
+		<!--  Javascript imports -->
+		<script src="libs/angular/angular.js"></script>
+		<script src="libs/angular-route/angular-route.min.js"></script>
+		<script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+		<!--  Angular Application Setup -->
+		<script src = "js/app.js"></script>
+		<script src = "js/appRoutes.js"></script>
+
+		<!--  Angular Services -->
+		<script src = "js/services/database.service.js"></script>
+		<script src = "js/services/query.service.js"></script>
+		<script src = "js/services/add.service.js"></script>
+
+		<!--  Angular Controllers -->
+		<script src = "js/controllers/home.control.js"></script>
+		<script src = "js/controllers/query.control.js"></script>
+		<script src = "js/controllers/add.control.js"></script>
+
+	</head>
+
+	<body>
+		<!--  Navigation bar for the MyStore application -->
+		<div class="navbar-fixed-top">
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li><a href="/">Home</a></li>
+					<li><a href="/query">Manage Items</a></li>
+					<li><a href="/add">Add Items</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--  Header and subheading for the main application landing -->
+		<div class="jumbotron">
+			<div class="container">
+				<h1>My Store Management</h1>
+			</div>
+		</div>
+
+		<div ng-app="MyStoreApplication">
+			<div ng-view></div>
+		</div>
+	</body>
+</html>

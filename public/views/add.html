@@ -1,0 +1,50 @@
+<div class="container" ng-controller="AddController as main">
+	<div class = "container">
+		<h1>Add New Item</h1>
+		<p class = "viewResponse" ng-style = "main.responseStyle">{{main.actionResponse}}</p>
+
+		<form name="addForm" class="form">
+			<div class="row">
+				<div class = "col-sm-3">
+					<div class="form-group">
+						<label>Item ID</label>
+						<input type="text" class="form-control input-sm" ng-model="newItemNumber" />
+					</div>
+				</div>
+
+				<div class = "col-sm-6">
+					<div class="form-group">
+						<label>Description</label>
+						<input type="text" class="form-control input-sm" ng-model="newDescription" />
+					</div>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "col-sm-3">
+					<div class="form-group">
+						<label>Quantity</label>
+						<input type="text" class="form-control input-sm" ng-model="newQuantity"/>
+					</div>
+				</div>
+
+				<div class = "col-sm-3">
+					<div class="form-group">
+						<label>Cost</label>
+						<input type="text" class="form-control input-sm" ng-model="newCost"/>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-sm-7">
+					<button class="btn btn-danger pull-Right" ng-click= "main.clearFields()">Clear</button>
+				</div>
+				<div class="col-sm-2">
+					<button class="btn btn-success pull-Right" ng-click= "main.addItem()">Add Item</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
